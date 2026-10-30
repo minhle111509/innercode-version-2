@@ -290,6 +290,10 @@ input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--button);
 .results { margin-top: 40px; display: grid; gap: 16px; scroll-margin-top: 72px; }
 .results h2 { margin: 0; font-size: 32px; font-weight: 600; }
 .results > .muted { margin: 0; }
+.sources { margin-top: 28px; }
+.sources h3 { margin: 0 0 8px; }
+.sources ul { margin: 10px 0; padding-left: 20px; display: grid; gap: 6px; line-height: 1.55; }
+.sources em { color: var(--text); }
 .error { color: var(--danger); font-weight: 600; }
 
 .reading-card {

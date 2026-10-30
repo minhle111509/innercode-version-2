@@ -7,6 +7,8 @@ import {
 } from './meanings.js';
 
 const form = document.getElementById('numerology-form');
+// Partner shop (natural stones); keep in sync with the link in the site menu
+const SHOP_URL = 'https://tiem-nho-an-yen.minhle111509.workers.dev/';
 const result = document.getElementById('numerology-result');
 const birthInput = document.getElementById('birth-date');
 
@@ -26,6 +28,15 @@ function meaningCard(label, number, { highlight = false, hint = null, details = 
       el('p', {}, [el('strong', { text: 'Thử thách: ' }), meaning.challenges]),
       extra ? el('p', {}, [el('strong', { text: 'Sự nghiệp: ' }), extra.career]) : null,
       extra ? el('p', {}, [el('strong', { text: 'Tình yêu: ' }), extra.love]) : null,
+      extra ? el('p', {}, [el('strong', { text: 'Màu hợp: ' }), extra.color]) : null,
+      extra
+        ? el('p', {}, [
+            el('strong', { text: 'Đá hợp: ' }),
+            `${extra.stone} · `,
+            el('a', { href: SHOP_URL, target: '_blank', rel: 'noopener', text: 'Xem đá tự nhiên tại Tiệm An Yên ↗' }),
+          ])
+        : null,
+      extra ? el('p', {}, [el('strong', { text: 'Thực hành: ' }), extra.practice]) : null,
       el('p', {}, [el('strong', { text: 'Lời khuyên: ' }), meaning.advice]),
     ]),
   ]);

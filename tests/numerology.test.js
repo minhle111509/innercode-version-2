@@ -157,7 +157,10 @@ test('personal year cycle and meaning tables are complete', () => {
   assert.deepEqual(cycle.map((c) => c.year), [2026, 2027, 2028, 2029]);
   assert.equal(cycle[0].number, 6);
   assert.equal(cycle[1].number, 7);
-  for (const n of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33]) assert.ok(NUMBER_DETAILS[n].career && NUMBER_DETAILS[n].love);
+  for (const n of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33]) {
+    const d = NUMBER_DETAILS[n];
+    assert.ok(d.career && d.love && d.color && d.stone && d.practice, `details for ${n}`);
+  }
   for (let n = 0; n <= 8; n += 1) assert.ok(CHALLENGE_MEANINGS[n]);
   for (const line of ['123', '456', '789', '147', '258', '369', '159', '357']) {
     assert.ok(ARROW_MEANINGS[line].full && ARROW_MEANINGS[line].empty);

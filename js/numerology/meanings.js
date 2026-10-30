@@ -135,21 +135,24 @@ export const CHART_DIGIT_MEANINGS = {
   9: 'Lý tưởng, hoài bão',
 };
 
-/** Career and love guidance per core number. */
+/**
+ * Career, love, colour, stone and daily practice per core number.
+ * Colours and stones follow common modern numerology correspondences (shown as reference only).
+ */
 export const NUMBER_DETAILS = {
-  1: { career: 'Khởi nghiệp, quản lý, kinh doanh, những vai trò cần tiên phong và tự quyết.', love: 'Cần người tôn trọng sự độc lập của bạn; học cách lắng nghe và chia sẻ quyền quyết định.' },
-  2: { career: 'Tư vấn, ngoại giao, nhân sự, chăm sóc khách hàng, nghệ thuật cần sự tinh tế.', love: 'Lãng mạn, gắn bó; cần cảm giác an toàn. Hãy nói thẳng nhu cầu thay vì chờ người khác đoán.' },
-  3: { career: 'Truyền thông, sáng tạo nội dung, giảng dạy, nghệ thuật, bán hàng.', love: 'Vui vẻ, cuốn hút; cần người hiểu cảm xúc thất thường. Tránh dùng lời nói làm tổn thương khi giận.' },
-  4: { career: 'Kỹ thuật, kế toán, xây dựng, vận hành, quản lý dự án, mọi việc cần quy trình.', love: 'Chung thủy, thực tế; thể hiện tình yêu bằng hành động. Đừng quên những cử chỉ lãng mạn nhỏ.' },
-  5: { career: 'Du lịch, marketing, bán hàng, báo chí, công việc tự do, nhiều đổi mới.', love: 'Cần tự do và trải nghiệm mới; hợp với người cởi mở. Cam kết sẽ bền khi bạn không thấy bị gò bó.' },
-  6: { career: 'Giáo dục, y tế, tư vấn gia đình, thiết kế, làm đẹp, dịch vụ cộng đồng.', love: 'Hết lòng vì gia đình; cẩn thận ôm đồm và kiểm soát. Tình yêu lành mạnh cần cả hai cùng cho đi.' },
-  7: { career: 'Nghiên cứu, phân tích, công nghệ, tâm lý, triết học, chuyên gia một lĩnh vực sâu.', love: 'Cần không gian riêng và người đồng điệu về tinh thần. Hãy mở lòng chia sẻ suy nghĩ thật.' },
-  8: { career: 'Tài chính, đầu tư, điều hành doanh nghiệp, luật, bất động sản.', love: 'Bảo bọc, có trách nhiệm; tránh đặt công việc lên trên tất cả. Dành thời gian chất lượng cho người thương.' },
-  9: { career: 'Hoạt động xã hội, nghệ thuật, giáo dục, y tế, các dự án vì cộng đồng.', love: 'Bao dung, lý tưởng; dễ hy sinh. Hãy chọn người biết trân trọng và đáp lại tình cảm của bạn.' },
-  10: { career: 'Công việc linh hoạt, kết nối, dịch vụ, khởi nghiệp nhỏ, những môi trường thay đổi nhanh.', love: 'Dễ hòa hợp, dễ được yêu mến; cần giữ chính kiến để mối quan hệ cân bằng.' },
-  11: { career: 'Truyền cảm hứng, chữa lành, nghệ thuật, tâm linh, giảng dạy, diễn giả.', love: 'Nhạy cảm sâu sắc; cần người thấu hiểu và kiên nhẫn. Tránh lý tưởng hóa đối phương.' },
-  22: { career: 'Kiến trúc, quản trị quy mô lớn, xây dựng tổ chức, dự án mang tính di sản.', love: 'Đáng tin và vững chãi; đừng để tham vọng lấn át thời gian cho gia đình.' },
-  33: { career: 'Chữa lành, giáo dục, tư vấn, nghệ thuật phụng sự, công tác thiện nguyện.', love: 'Yêu thương vô điều kiện; cần học cách nhận lại và đặt ranh giới.' },
+  1: { career: 'Khởi nghiệp, quản lý, kinh doanh, những vai trò cần tiên phong và tự quyết.', love: 'Cần người tôn trọng sự độc lập của bạn; học cách lắng nghe và chia sẻ quyền quyết định.', color: 'Đỏ, cam', stone: 'Hồng ngọc, thạch anh đỏ, garnet', practice: 'Mỗi sáng tự quyết một việc quan trọng và làm nó trước tiên.' },
+  2: { career: 'Tư vấn, ngoại giao, nhân sự, chăm sóc khách hàng, nghệ thuật cần sự tinh tế.', love: 'Lãng mạn, gắn bó; cần cảm giác an toàn. Hãy nói thẳng nhu cầu thay vì chờ người khác đoán.', color: 'Trắng, bạc, xanh nhạt', stone: 'Đá mặt trăng, ngọc trai', practice: 'Dành 5 phút lắng nghe trọn vẹn một người mà không ngắt lời.' },
+  3: { career: 'Truyền thông, sáng tạo nội dung, giảng dạy, nghệ thuật, bán hàng.', love: 'Vui vẻ, cuốn hút; cần người hiểu cảm xúc thất thường. Tránh dùng lời nói làm tổn thương khi giận.', color: 'Vàng', stone: 'Thạch anh vàng (citrine), topaz vàng', practice: 'Viết hoặc kể lại một ý tưởng mỗi ngày, rồi hoàn thành một việc nhỏ từ nó.' },
+  4: { career: 'Kỹ thuật, kế toán, xây dựng, vận hành, quản lý dự án, mọi việc cần quy trình.', love: 'Chung thủy, thực tế; thể hiện tình yêu bằng hành động. Đừng quên những cử chỉ lãng mạn nhỏ.', color: 'Xanh lá', stone: 'Ngọc bích (jade), đá lục bảo', practice: 'Lập danh sách 3 việc cần làm trong ngày và cho phép mình đổi một việc.' },
+  5: { career: 'Du lịch, marketing, bán hàng, báo chí, công việc tự do, nhiều đổi mới.', love: 'Cần tự do và trải nghiệm mới; hợp với người cởi mở. Cam kết sẽ bền khi bạn không thấy bị gò bó.', color: 'Xanh ngọc, xanh dương', stone: 'Ngọc lam (turquoise), aquamarine', practice: 'Thử một điều mới nhỏ mỗi tuần, nhưng giữ cố định giờ ngủ và giờ làm việc.' },
+  6: { career: 'Giáo dục, y tế, tư vấn gia đình, thiết kế, làm đẹp, dịch vụ cộng đồng.', love: 'Hết lòng vì gia đình; cẩn thận ôm đồm và kiểm soát. Tình yêu lành mạnh cần cả hai cùng cho đi.', color: 'Hồng, xanh chàm', stone: 'Thạch anh hồng', practice: 'Mỗi ngày làm một việc tử tế cho chính mình, không chỉ cho người khác.' },
+  7: { career: 'Nghiên cứu, phân tích, công nghệ, tâm lý, triết học, chuyên gia một lĩnh vực sâu.', love: 'Cần không gian riêng và người đồng điệu về tinh thần. Hãy mở lòng chia sẻ suy nghĩ thật.', color: 'Tím', stone: 'Thạch anh tím (amethyst)', practice: '10 phút tĩnh lặng hoặc viết nhật ký trước khi ngủ; tuần này chia sẻ một suy nghĩ thật với người tin cậy.' },
+  8: { career: 'Tài chính, đầu tư, điều hành doanh nghiệp, luật, bất động sản.', love: 'Bảo bọc, có trách nhiệm; tránh đặt công việc lên trên tất cả. Dành thời gian chất lượng cho người thương.', color: 'Đen, nâu, vàng đồng', stone: 'Mắt hổ, obsidian (hắc diện thạch)', practice: 'Ghi chép thu chi mỗi tối và dành một buổi trong tuần trọn vẹn cho gia đình.' },
+  9: { career: 'Hoạt động xã hội, nghệ thuật, giáo dục, y tế, các dự án vì cộng đồng.', love: 'Bao dung, lý tưởng; dễ hy sinh. Hãy chọn người biết trân trọng và đáp lại tình cảm của bạn.', color: 'Vàng kim, đỏ trầm', stone: 'Thạch anh trắng, opal', practice: 'Buông một điều cũ mỗi tháng (đồ vật, thói quen, nỗi giận) và làm một việc thiện nhỏ.' },
+  10: { career: 'Công việc linh hoạt, kết nối, dịch vụ, khởi nghiệp nhỏ, những môi trường thay đổi nhanh.', love: 'Dễ hòa hợp, dễ được yêu mến; cần giữ chính kiến để mối quan hệ cân bằng.', color: 'Vàng kim, cam', stone: 'Thạch anh vàng, thạch anh tóc vàng', practice: 'Viết ra 3 giá trị của riêng bạn và đọc lại trước mỗi quyết định lớn.' },
+  11: { career: 'Truyền cảm hứng, chữa lành, nghệ thuật, tâm linh, giảng dạy, diễn giả.', love: 'Nhạy cảm sâu sắc; cần người thấu hiểu và kiên nhẫn. Tránh lý tưởng hóa đối phương.', color: 'Bạc, trắng, tím nhạt', stone: 'Đá mặt trăng, thạch anh trắng', practice: 'Thiền hoặc thở chậm 10 phút mỗi ngày; ghi lại trực giác và kiểm chứng sau một tuần.' },
+  22: { career: 'Kiến trúc, quản trị quy mô lớn, xây dựng tổ chức, dự án mang tính di sản.', love: 'Đáng tin và vững chãi; đừng để tham vọng lấn át thời gian cho gia đình.', color: 'Vàng kim, xanh rêu', stone: 'Ngọc bích, mã não', practice: 'Chia mục tiêu lớn thành việc của tuần này và chỉ tập trung vào việc đó.' },
+  33: { career: 'Chữa lành, giáo dục, tư vấn, nghệ thuật phụng sự, công tác thiện nguyện.', love: 'Yêu thương vô điều kiện; cần học cách nhận lại và đặt ranh giới.', color: 'Hồng, xanh lá nhạt', stone: 'Thạch anh hồng, ngọc lục bảo', practice: 'Đặt một ranh giới rõ ràng mỗi tuần và nói lời cảm ơn khi được người khác giúp.' },
 };
 
 export const CHALLENGE_MEANINGS = {
