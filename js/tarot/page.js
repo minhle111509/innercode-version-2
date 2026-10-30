@@ -36,6 +36,8 @@ function cardView({ card, reversed, position }, index) {
     el('p', { class: 'muted', text: card.nameEn }),
     el('p', { text: meaning }),
     card.advice ? el('p', { class: 'advice' }, [el('strong', { text: 'Lời khuyên: ' }), card.advice]) : null,
+    card.love ? el('p', {}, [el('strong', { text: 'Tình yêu: ' }), card.love]) : null,
+    card.work ? el('p', {}, [el('strong', { text: 'Công việc: ' }), card.work]) : null,
     card.suit ? el('p', { class: 'muted', text: `Bộ ${SUITS[card.suit].vi}: ${SUITS[card.suit].domain}` }) : el('p', { class: 'muted', text: 'Ẩn Chính: bài học lớn của giai đoạn này' }),
   ]);
 

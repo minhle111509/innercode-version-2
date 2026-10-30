@@ -13,9 +13,10 @@ test('deck has 78 unique, complete cards', () => {
   assert.equal(new Set(DECK.map((c) => c.id)).size, 78);
   assert.equal(DECK.filter((c) => c.arcana === 'major').length, 22);
   for (const card of DECK) {
-    for (const field of ['nameVi', 'nameEn', 'upright', 'reversed', 'label', 'symbol']) {
+    for (const field of ['nameVi', 'nameEn', 'upright', 'reversed', 'label', 'symbol', 'advice']) {
       assert.ok(card[field], `${card.id} missing ${field}`);
     }
+    if (card.arcana === 'major') assert.ok(card.love && card.work, `${card.id} missing love/work`);
   }
   assert.ok(Object.isFrozen(DECK) && Object.isFrozen(DECK[0]));
 });

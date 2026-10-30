@@ -174,6 +174,10 @@ function arcanaCard(position, points) {
       el('p', {}, [el('strong', { text: 'Khi tiêu cực: ' }), arcana.minus]),
       position.career ? el('p', {}, [el('strong', { text: 'Nghề nghiệp phù hợp: ' }), ARCANA_DETAILS[number].career]) : null,
       el('p', {}, [el('strong', { text: 'Lời khuyên: ' }), ARCANA_DETAILS[number].advice]),
+      position.highlight || position.key === 'love'
+        ? el('p', {}, [el('strong', { text: 'Tình yêu: ' }), ARCANA_DETAILS[number].love])
+        : null,
+      el('p', {}, [el('strong', { text: 'Thực hành: ' }), ARCANA_DETAILS[number].practice]),
     ]),
   ]);
 }

@@ -52,6 +52,7 @@ export const ELEMENTS = {
     careers: 'Giáo dục, xuất bản, thiết kế, nông nghiệp, y dược thảo mộc, phát triển con người',
     boost: 'Đi bộ trong thiên nhiên, trồng cây, đọc sách, học một kỹ năng mới.',
     excess: 'Dễ cố chấp, nóng vội mở rộng; cần học cách cắt tỉa và tập trung.',
+    stone: 'Ngọc bích (jade), đá lục bảo, aventurine xanh',
   },
   Hỏa: {
     nature: 'Nhiệt huyết, lan tỏa, lễ nghĩa',
@@ -62,6 +63,7 @@ export const ELEMENTS = {
     careers: 'Truyền thông, nghệ thuật biểu diễn, marketing, ẩm thực, năng lượng, công nghệ',
     boost: 'Vận động mạnh, phơi nắng sớm, gặp gỡ bạn bè, thể hiện bản thân.',
     excess: 'Dễ nóng nảy, kiệt sức vì cháy hết mình; cần nghỉ ngơi và làm mát cảm xúc.',
+    stone: 'Hồng ngọc, thạch anh hồng, mã não đỏ',
   },
   Thổ: {
     nature: 'Ổn định, bao dung, chữ tín',
@@ -72,6 +74,7 @@ export const ELEMENTS = {
     careers: 'Bất động sản, xây dựng, quản trị, tư vấn, nhân sự, nông sản',
     boost: 'Ăn uống điều độ, sắp xếp nhà cửa, làm vườn, giữ nề nếp sinh hoạt.',
     excess: 'Dễ trì trệ, lo nghĩ nhiều; cần thêm vận động và thay đổi.',
+    stone: 'Thạch anh vàng (citrine), mắt hổ, hoàng thạch',
   },
   Kim: {
     nature: 'Quyết đoán, nguyên tắc, chính nghĩa',
@@ -82,6 +85,7 @@ export const ELEMENTS = {
     careers: 'Tài chính, ngân hàng, luật, kỹ thuật, cơ khí, quản lý chất lượng',
     boost: 'Hít thở sâu, dọn dẹp tối giản, đặt nguyên tắc rõ ràng, tập trung chuyên môn.',
     excess: 'Dễ cứng nhắc, khắt khe; cần mềm mỏng và cởi mở hơn.',
+    stone: 'Thạch anh trắng, đá mặt trăng, ngọc trai',
   },
   Thủy: {
     nature: 'Linh hoạt, trí tuệ, thấu hiểu',
@@ -92,21 +96,22 @@ export const ELEMENTS = {
     careers: 'Nghiên cứu, du lịch, logistics, tâm lý, thương mại, công nghệ thông tin',
     boost: 'Uống đủ nước, ngủ sâu, thiền, bơi lội, dành thời gian lắng nghe.',
     excess: 'Dễ thiếu định hướng, lo âu; cần mục tiêu rõ và nền nếp.',
+    stone: 'Obsidian (hắc diện thạch), aquamarine, ngọc lam',
   },
 };
 
 /** Personality of the Day Master (Nhật chủ), keyed by stem name. */
 export const DAY_MASTERS = {
-  Giáp: { image: 'Cây đại thụ', text: 'Ngay thẳng, có chí hướng, thích dẫn dắt và che chở người khác. Cần học cách linh hoạt, tránh cứng đầu.' },
-  Ất: { image: 'Hoa cỏ, dây leo', text: 'Mềm mỏng, khéo léo, thích nghi tốt và giỏi kết nối. Cần tự tin hơn, bớt phụ thuộc vào người khác.' },
-  Bính: { image: 'Mặt trời', text: 'Rộng lượng, nhiệt tình, lạc quan và tỏa sáng giữa đám đông. Cần kiên nhẫn và giữ năng lượng bền bỉ.' },
-  Đinh: { image: 'Ngọn nến', text: 'Ấm áp, tinh tế, sâu sắc, soi sáng cho người gần mình. Cần bảo vệ năng lượng, tránh suy nghĩ quá nhiều.' },
-  Mậu: { image: 'Núi lớn', text: 'Vững vàng, đáng tin, bao dung và giữ chữ tín. Cần cởi mở với thay đổi, tránh bảo thủ.' },
-  Kỷ: { image: 'Đất ruộng', text: 'Chu đáo, thực tế, giỏi nuôi dưỡng và chăm sóc. Cần đặt ranh giới, tránh ôm việc của người khác.' },
-  Canh: { image: 'Kim loại thô, lưỡi rìu', text: 'Mạnh mẽ, quyết đoán, trọng nghĩa khí, dám làm. Cần tiết chế sự thẳng thắn để không làm tổn thương người khác.' },
-  Tân: { image: 'Trang sức, ngọc quý', text: 'Tinh tế, có gu, cầu toàn và giàu lòng tự trọng. Cần chấp nhận sự không hoàn hảo.' },
-  Nhâm: { image: 'Biển lớn, sông dài', text: 'Thông minh, phóng khoáng, nhiều ý tưởng, thích tự do. Cần tập trung và kỷ luật để biến ý tưởng thành thực.' },
-  Quý: { image: 'Mưa, sương', text: 'Nhạy cảm, trực giác tốt, kín đáo và giàu trí tưởng tượng. Cần tin vào bản thân, tránh lo âu.' },
+  Giáp: { image: 'Cây đại thụ', text: 'Ngay thẳng, có chí hướng, thích dẫn dắt và che chở người khác. Cần học cách linh hoạt, tránh cứng đầu.', career: 'Quản lý, giáo dục, xây dựng tổ chức, những vai trò dẫn dắt.', love: 'Che chở và chung thủy; cần lắng nghe thay vì luôn quyết thay người kia.' },
+  Ất: { image: 'Hoa cỏ, dây leo', text: 'Mềm mỏng, khéo léo, thích nghi tốt và giỏi kết nối. Cần tự tin hơn, bớt phụ thuộc vào người khác.', career: 'Tư vấn, ngoại giao, thiết kế, chăm sóc khách hàng, nghề cần sự khéo léo.', love: 'Dịu dàng, biết vun vén; cần giữ chính kiến để không phụ thuộc.' },
+  Bính: { image: 'Mặt trời', text: 'Rộng lượng, nhiệt tình, lạc quan và tỏa sáng giữa đám đông. Cần kiên nhẫn và giữ năng lượng bền bỉ.', career: 'Truyền thông, giảng dạy, biểu diễn, kinh doanh hướng tới đám đông.', love: 'Nồng nhiệt, hào phóng; cần sự bền bỉ để tình cảm không chóng nguội.' },
+  Đinh: { image: 'Ngọn nến', text: 'Ấm áp, tinh tế, sâu sắc, soi sáng cho người gần mình. Cần bảo vệ năng lượng, tránh suy nghĩ quá nhiều.', career: 'Văn hóa, nghệ thuật, tâm lý, nghiên cứu, công việc cần chiều sâu.', love: 'Ân cần, tinh tế; cần nói ra cảm xúc thay vì giữ trong lòng.' },
+  Mậu: { image: 'Núi lớn', text: 'Vững vàng, đáng tin, bao dung và giữ chữ tín. Cần cởi mở với thay đổi, tránh bảo thủ.', career: 'Bất động sản, quản trị, tài chính, những vị trí cần sự tin cậy.', love: 'Đáng tin, bảo bọc; cần thêm sự lãng mạn và linh hoạt.' },
+  Kỷ: { image: 'Đất ruộng', text: 'Chu đáo, thực tế, giỏi nuôi dưỡng và chăm sóc. Cần đặt ranh giới, tránh ôm việc của người khác.', career: 'Giáo dục, dịch vụ, y tế, nhân sự, công việc chăm lo con người.', love: 'Chu đáo, hy sinh; cần được quan tâm lại và đặt ranh giới.' },
+  Canh: { image: 'Kim loại thô, lưỡi rìu', text: 'Mạnh mẽ, quyết đoán, trọng nghĩa khí, dám làm. Cần tiết chế sự thẳng thắn để không làm tổn thương người khác.', career: 'Kỹ thuật, cơ khí, luật, quân đội, công việc cần quyết đoán.', love: 'Thẳng thắn, trọng nghĩa; cần nói lời mềm mỏng để giữ hòa khí.' },
+  Tân: { image: 'Trang sức, ngọc quý', text: 'Tinh tế, có gu, cầu toàn và giàu lòng tự trọng. Cần chấp nhận sự không hoàn hảo.', career: 'Tài chính, trang sức, làm đẹp, thẩm định, nghề đòi hỏi tinh xảo.', love: 'Tinh tế, kỹ tính; cần bớt cầu toàn ở người mình thương.' },
+  Nhâm: { image: 'Biển lớn, sông dài', text: 'Thông minh, phóng khoáng, nhiều ý tưởng, thích tự do. Cần tập trung và kỷ luật để biến ý tưởng thành thực.', career: 'Thương mại, du lịch, logistics, công nghệ, công việc nhiều chuyển động.', love: 'Phóng khoáng, cuốn hút; cần cam kết rõ ràng để người kia yên tâm.' },
+  Quý: { image: 'Mưa, sương', text: 'Nhạy cảm, trực giác tốt, kín đáo và giàu trí tưởng tượng. Cần tin vào bản thân, tránh lo âu.', career: 'Nghiên cứu, tâm lý, nghệ thuật, tư vấn, công việc cần trực giác.', love: 'Sâu sắc, giàu cảm xúc; cần tin tưởng và bớt lo âu trong tình cảm.' },
 };
 
 /** Tàng can: hidden stems of each branch (stem indices), main qi first. */

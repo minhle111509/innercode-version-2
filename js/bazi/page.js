@@ -2,6 +2,9 @@ import { el, setChildren, showError } from '../shared/dom.js';
 import { calculateBazi, parseBirthDateTime, ELEMENT_ORDER } from './bazi.js';
 import { analyzeAdvanced } from './advanced.js';
 
+// Partner shop (natural stones); keep in sync with the link in the site menu
+const SHOP_URL = 'https://tiem-nho-an-yen.minhle111509.workers.dev/';
+
 const form = document.getElementById('bazi-form');
 const result = document.getElementById('bazi-result');
 const birthInput = document.getElementById('birth-date');
@@ -51,6 +54,11 @@ function elementAdvice(name, info, role) {
     el('span', {}, [el('strong', { text: 'Màu: ' }), info.color]),
     el('span', {}, [el('strong', { text: 'Hướng: ' }), info.direction]),
     el('span', {}, [el('strong', { text: 'Nghề hợp: ' }), info.careers]),
+    el('span', {}, [
+      el('strong', { text: 'Đá hợp: ' }),
+      `${info.stone} · `,
+      el('a', { href: SHOP_URL, target: '_blank', rel: 'noopener', text: 'Xem tại Tiệm An Yên ↗' }),
+    ]),
     el('span', { class: 'muted', text: info.boost }),
   ]);
 }
@@ -132,6 +140,8 @@ function render(report, adv) {
       el('div', {}, [
         el('h3', { text: `Nhật chủ ${dayMaster.name} ${dayMaster.element}: ${dayMaster.image}` }),
         el('p', { text: dayMaster.text }),
+        el('p', {}, [el('strong', { text: 'Sự nghiệp: ' }), dayMaster.career]),
+        el('p', {}, [el('strong', { text: 'Tình cảm: ' }), dayMaster.love]),
         el('p', {}, [
           el('strong', { text: `${strength.level} (${strength.score}/100). ` }),
           `Lệnh tháng ${pillars.month.branch.name}: nhật chủ ở trạng thái ${strength.state}, ${strength.stateText}. `,

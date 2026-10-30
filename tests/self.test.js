@@ -40,6 +40,7 @@ test('every type has full description and valid arrows', () => {
     const type = TYPES[t];
     for (const field of ['name', 'desire', 'fear', 'strengths', 'growth']) assert.ok(type[field]);
     assert.ok(TYPES[type.integration] && TYPES[type.stress]);
+    assert.ok(type.career && type.love && type.practice, `extra texts for type ${t}`);
   }
 });
 

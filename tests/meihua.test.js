@@ -130,3 +130,9 @@ test('development compares both mutual trigrams with Thể', () => {
   const r = buildReading(5, 3, 5); // mutual Hỏa Thủy Vị Tế: Ly over Khảm, Thể = Ly (Hỏa)
   assert.deepEqual(r.development.map((d) => [d.trigram.name, d.key]), [['Ly', 'same'], ['Khảm', 'yongControlsTi']]);
 });
+
+test('every hexagram has work and love readings', async () => {
+  const { HEXAGRAMS, HEXAGRAM_TOPICS } = await import('../js/meihua/data.js');
+  assert.equal(HEXAGRAMS.length, 64);
+  for (const h of HEXAGRAMS) assert.ok(HEXAGRAM_TOPICS[h.number]?.work && HEXAGRAM_TOPICS[h.number]?.love, `hexagram ${h.number}`);
+});

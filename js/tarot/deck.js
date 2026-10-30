@@ -50,6 +50,57 @@ const MAJOR_ADVICE = [
   'Ghi nhận thành quả, khép lại một chu kỳ trọn vẹn.',
 ];
 
+// Love and work readings for the 22 Major Arcana, in deck order.
+const MAJOR_LOVE = [
+  'Mở lòng với một mối quan hệ mới hoặc làm mới cách yêu; đừng sợ bắt đầu.',
+  'Chủ động bày tỏ; lời nói và hành động của bạn có sức hút lúc này.',
+  'Lắng nghe điều không nói ra; trực giác cho bạn biết người kia thật sự nghĩ gì.',
+  'Tình cảm ấm áp, được chăm sóc; thời điểm tốt để vun đắp và gắn bó.',
+  'Cần sự ổn định và cam kết rõ ràng; tránh kiểm soát người mình thương.',
+  'Mối quan hệ nghiêm túc, hướng tới cam kết theo giá trị truyền thống.',
+  'Một lựa chọn quan trọng trong tình cảm; hãy chọn bằng trái tim và giá trị chung.',
+  'Chủ động dẫn dắt mối quan hệ; cả hai cần cùng một hướng đi.',
+  'Kiên nhẫn và dịu dàng sẽ hóa giải căng thẳng tốt hơn tranh cãi.',
+  'Cần thời gian riêng để hiểu mình muốn gì trước khi đến với ai.',
+  'Duyên đến bất ngờ hoặc mối quan hệ bước sang giai đoạn mới.',
+  'Sòng phẳng, rõ ràng; mối quan hệ cần sự công bằng và trung thực.',
+  'Tạm chững lại; nhìn mối quan hệ từ góc của người kia.',
+  'Khép lại một chương cũ để mở ra điều mới lành mạnh hơn.',
+  'Hòa hợp nhờ biết điều độ, nhường nhịn và lắng nghe.',
+  'Cẩn thận sự ràng buộc, ghen tuông hoặc gắn bó không lành mạnh.',
+  'Biến động hoặc sự thật được phơi bày; sau đó mọi thứ sẽ rõ ràng hơn.',
+  'Hy vọng và chữa lành; tình cảm chân thành đang dần đến.',
+  'Có điều chưa rõ hoặc hiểu lầm; đừng vội kết luận.',
+  'Hạnh phúc, cởi mở, mối quan hệ tươi sáng và vui vẻ.',
+  'Nhìn lại và tha thứ; một cơ hội làm mới tình cảm.',
+  'Viên mãn, gắn kết trọn vẹn; một chặng đường tình cảm được hoàn thành.',
+];
+
+const MAJOR_WORK = [
+  'Thử hướng đi mới, khởi nghiệp hoặc dự án lạ; học trong lúc làm.',
+  'Đủ kỹ năng để hiện thực hóa ý tưởng; thời điểm tốt để trình bày, thuyết phục.',
+  'Quan sát, nghiên cứu kỹ; chưa nên công khai kế hoạch.',
+  'Dự án phát triển, sinh lời; môi trường sáng tạo, thoải mái.',
+  'Cần kỷ luật, quy trình và vai trò quản lý rõ ràng.',
+  'Học từ người có kinh nghiệm; làm việc trong tổ chức, theo chuẩn mực.',
+  'Hợp tác quan trọng; chọn đối tác cùng giá trị.',
+  'Tiến lên mạnh mẽ, đạt mục tiêu nhờ quyết tâm và tập trung.',
+  'Bền bỉ vượt áp lực; dùng sự mềm mỏng để thuyết phục.',
+  'Đào sâu chuyên môn, làm việc độc lập, chậm mà chắc.',
+  'Thời cơ thay đổi; sẵn sàng nắm cơ hội khi nó đến.',
+  'Hợp đồng, giấy tờ, pháp lý; làm đúng thì được đền đáp.',
+  'Công việc tạm chững; dùng thời gian này để đổi chiến lược.',
+  'Kết thúc một vị trí hay dự án cũ để chuyển sang hướng mới.',
+  'Cân bằng công việc và nghỉ ngơi; kết hợp nhiều nguồn lực hài hòa.',
+  'Coi chừng bị ràng buộc bởi tiền bạc hay công việc không phù hợp.',
+  'Thay đổi đột ngột trong công việc; nền tảng mới sẽ vững hơn.',
+  'Triển vọng tốt, được truyền cảm hứng; kiên trì với định hướng dài hạn.',
+  'Thông tin chưa rõ ràng; kiểm tra kỹ trước khi ký kết hay đầu tư.',
+  'Thành công, được công nhận; năng lượng cao để làm việc lớn.',
+  'Được đánh giá lại; một lời mời hoặc cơ hội nghề nghiệp mới.',
+  'Hoàn thành mục tiêu lớn, có thể mở rộng ra thị trường hoặc môi trường mới.',
+];
+
 const SUITS = {
   wands: { en: 'Wands', vi: 'Gậy', symbol: '🔥', domain: 'hành động, đam mê, sự nghiệp' },
   cups: { en: 'Cups', vi: 'Cốc', symbol: '💧', domain: 'cảm xúc, tình yêu, các mối quan hệ' },
@@ -131,6 +182,74 @@ const MINOR_MEANINGS = {
   ],
 };
 
+// Short advice per Minor Arcana card, in RANKS order.
+const MINOR_ADVICE = {
+  wands: [
+    'Bắt tay ngay khi cảm hứng còn nóng.',
+    'Vẽ kế hoạch rõ trước khi mở rộng.',
+    'Kiên nhẫn chờ kết quả, tiếp tục nhìn xa.',
+    'Ăn mừng cột mốc cùng người thân.',
+    'Cạnh tranh lành mạnh, lắng nghe ý kiến khác.',
+    'Đón nhận ghi nhận nhưng giữ khiêm tốn.',
+    'Giữ vững lập trường đúng đắn.',
+    'Hành động nhanh khi thời cơ đến.',
+    'Gắng thêm chút nữa, đích đến đã gần.',
+    'Bớt ôm việc, nhờ người hỗ trợ.',
+    'Tò mò học hỏi, thử điều mới.',
+    'Nhiệt huyết nhưng nghĩ kỹ trước khi lao đi.',
+    'Tự tin thể hiện và truyền lửa cho người khác.',
+    'Dẫn dắt bằng tầm nhìn và làm gương.',
+  ],
+  cups: [
+    'Mở lòng đón nhận yêu thương.',
+    'Vun đắp sự đồng điệu đôi bên.',
+    'Dành thời gian cho bạn bè thân.',
+    'Nhìn quanh, cơ hội đang ở ngay trước mắt.',
+    'Cho phép mình buồn rồi bước tiếp.',
+    'Trân trọng ký ức nhưng sống cho hiện tại.',
+    'Chọn điều thực tế, tránh mơ mộng viển vông.',
+    'Dám rời đi khi điều cũ không còn ý nghĩa.',
+    'Biết đủ và tận hưởng điều mình đang có.',
+    'Chăm sóc tổ ấm, nói lời yêu thương.',
+    'Đón nhận cảm xúc và ý tưởng sáng tạo.',
+    'Theo đuổi ước mơ nhưng giữ lời hứa.',
+    'Lắng nghe trái tim, thấu cảm người khác.',
+    'Giữ cảm xúc cân bằng trước mọi chuyện.',
+  ],
+  swords: [
+    'Nói thẳng sự thật một cách tử tế.',
+    'Đối diện lựa chọn, đừng né tránh mãi.',
+    'Cho mình thời gian để vết thương lành.',
+    'Nghỉ ngơi trước khi tiếp tục.',
+    'Không phải trận nào cũng cần thắng.',
+    'Rời khỏi chỗ khó khăn, hướng về phía trước.',
+    'Hành động minh bạch, tránh đường tắt.',
+    'Bạn tự do hơn bạn nghĩ; bước ra khỏi lối mòn.',
+    'Chia sẻ nỗi lo với người tin cậy.',
+    'Điều tồi tệ nhất đã qua, đứng dậy làm lại.',
+    'Quan sát kỹ trước khi lên tiếng.',
+    'Quyết đoán nhưng cần có kế hoạch.',
+    'Rõ ràng, thẳng thắn mà vẫn mềm mỏng.',
+    'Quyết định bằng lý trí và công bằng.',
+  ],
+  pentacles: [
+    'Nắm lấy cơ hội tài chính vững chắc.',
+    'Linh hoạt sắp xếp ưu tiên.',
+    'Hợp tác để nâng cao chất lượng.',
+    'Tiết kiệm nhưng đừng khư khư giữ.',
+    'Đừng ngại nhờ giúp đỡ khi khó khăn.',
+    'Cho đi đúng lúc, nhận lại đúng cách.',
+    'Kiên nhẫn với khoản đầu tư dài hạn.',
+    'Rèn luyện tay nghề mỗi ngày.',
+    'Tận hưởng thành quả tự mình tạo ra.',
+    'Xây nền tảng bền vững cho gia đình.',
+    'Học thêm một kỹ năng mới.',
+    'Làm đều đặn, chắc chắn từng bước.',
+    'Cân bằng chăm lo gia đình và bản thân.',
+    'Quản lý tài sản khôn ngoan và rộng lượng.',
+  ],
+};
+
 const ROMAN = ['0', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X', 'XI', 'XII', 'XIII',
   'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX', 'XXI'];
 
@@ -146,6 +265,8 @@ function buildDeck() {
     upright,
     reversed,
     advice: MAJOR_ADVICE[i],
+    love: MAJOR_LOVE[i],
+    work: MAJOR_WORK[i],
   }));
 
   const minors = Object.entries(SUITS).flatMap(([suitKey, suit]) =>
@@ -161,6 +282,7 @@ function buildDeck() {
         nameVi: `${rankVi} ${suit.vi}`,
         upright,
         reversed,
+        advice: MINOR_ADVICE[suitKey][i],
       };
     }),
   );

@@ -70,3 +70,12 @@ test('calculateBazi uses lunar year for con giáp', () => {
   assert.equal(r.zodiac.animal, 'Rắn');
   assert.ok(r.dayMaster.text);
 });
+
+test('day masters and elements have the extra reading texts', async () => {
+  const { DAY_MASTERS, ELEMENTS, STEMS } = await import('../js/bazi/data.js');
+  for (const stem of STEMS) {
+    const d = DAY_MASTERS[stem.name];
+    assert.ok(d && d.text && d.career && d.love, `day master ${stem.name}`);
+  }
+  for (const name of ['Mộc', 'Hỏa', 'Thổ', 'Kim', 'Thủy']) assert.ok(ELEMENTS[name].stone, `stone for ${name}`);
+});

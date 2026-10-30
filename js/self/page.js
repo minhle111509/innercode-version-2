@@ -56,6 +56,9 @@ quizForm.addEventListener('submit', (event) => {
           el('p', {}, [el('strong', { text: 'Nỗi sợ cốt lõi: ' }), type.fear]),
           el('p', {}, [el('strong', { text: 'Điểm mạnh: ' }), type.strengths]),
           el('p', {}, [el('strong', { text: 'Hướng phát triển: ' }), type.growth]),
+          el('p', {}, [el('strong', { text: 'Công việc phù hợp: ' }), type.career]),
+          el('p', {}, [el('strong', { text: 'Trong tình yêu: ' }), type.love]),
+          el('p', {}, [el('strong', { text: 'Thực hành: ' }), type.practice]),
           el('p', {}, [
             el('strong', { text: 'Khi phát triển ' }), `bạn mang nét tích cực của nhóm ${type.integration} (${TYPES[type.integration].name}); `,
             el('strong', { text: 'khi căng thẳng ' }), `dễ rơi vào mặt tiêu cực của nhóm ${type.stress} (${TYPES[type.stress].name}).`,

@@ -72,3 +72,12 @@ test('calculateMatrixReport validates the birth date', () => {
   assert.throws(() => calculateMatrixReport({ birthDate: '2030-01-01', today: TODAY }), /tương lai/);
   assert.throws(() => calculateMatrixReport({ birthDate: '', today: TODAY }), /hợp lệ/);
 });
+
+test('every arcana energy has career, advice, love and practice texts', async () => {
+  const { ARCANA, ARCANA_DETAILS } = await import('../js/matrix/meanings.js');
+  for (let n = 1; n <= 22; n += 1) {
+    assert.ok(ARCANA[n], `arcana ${n}`);
+    const d = ARCANA_DETAILS[n];
+    assert.ok(d.career && d.advice && d.love && d.practice, `details for ${n}`);
+  }
+});

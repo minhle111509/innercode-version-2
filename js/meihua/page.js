@@ -1,6 +1,6 @@
 import { el, setChildren, showError } from '../shared/dom.js';
 import { castByTime, castByNumbers, parseDateTime } from './meihua.js';
-import { LINE_POSITIONS, HEXAGRAM_ADVICE } from './data.js';
+import { LINE_POSITIONS, HEXAGRAM_ADVICE, HEXAGRAM_TOPICS } from './data.js';
 import { LINE_TEXTS } from './lines.js';
 
 const form = document.getElementById('meihua-form');
@@ -44,6 +44,8 @@ function hexagramFigure(hexagram, { label, movingLine = null }) {
     el('p', { class: 'muted', text: `Quẻ số ${hexagram.number} · ${up.symbol} ${up.name} trên, ${low.symbol} ${low.name} dưới` }),
     el('p', { text: hexagram.meaning }),
     el('p', { class: 'advice' }, [el('strong', { text: 'Lời khuyên: ' }), HEXAGRAM_ADVICE[hexagram.number]]),
+    el('p', {}, [el('strong', { text: 'Công việc, tài lộc: ' }), HEXAGRAM_TOPICS[hexagram.number].work]),
+    el('p', {}, [el('strong', { text: 'Tình cảm: ' }), HEXAGRAM_TOPICS[hexagram.number].love]),
     el('details', { class: 'lines-detail' }, [
       el('summary', { text: 'Xem lời 6 hào' }),
       el('ol', {}, LINE_TEXTS[hexagram.number].map((text, i) => el('li', { class: movingLine === i + 1 ? 'moving-text' : null }, [
