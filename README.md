@@ -4,6 +4,7 @@
 > Repo `minhle111509/innercode-giai-doan-1-v2` là bản sao của `minhle111509/innercode-giai-doan-1` (bản gốc giữ nguyên, không sửa), chạy tại https://minhle111509.github.io/innercode-giai-doan-1-v2/ (GitHub Pages, nhánh `main`).
 > Khác bản gốc: menu và chân trang mọi trang có liên kết sang **Tiệm Nhỏ An Yên** (https://tiem-nho-an-yen.minhle111509.workers.dev); trang Tiệm cũng có liên kết ngược về bản này (repo `minhle111509/tiem-nho-an-yen`, chân trang).
 > Đổi địa chỉ một trong hai web thì sửa liên kết ở cả hai phía.
+> Ô Tarot (trang chủ và đầu trang `tarot.html`) dùng ảnh lá thật **X – Wheel of Fortune** của bộ Rider–Waite (tranh Pamela Colman Smith, xuất bản 1909, được xem là phạm vi công cộng), file `assets/tarot-wheel-of-fortune.webp`, lấy từ gói npm `@cometpisces/tarot-kit-images` 0.2.0. Gói này tự ghi là không bảo đảm tình trạng bản quyền của ảnh.
 
 
 Website tĩnh (HTML/CSS/JavaScript thuần, không cần build, không cần máy chủ) kết hợp **huyền học chuyên sâu** và **khám phá bản thân**. Giao diện kiểu trang sản phẩm: nền tối, tiêu đề lớn, mỗi công cụ là một "mặt đồng hồ" vẽ bằng CSS.
