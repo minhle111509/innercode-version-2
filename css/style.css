@@ -543,7 +543,7 @@ input[type="number"]:focus, input[type="datetime-local"]:focus, input[type="time
 .tool > p { margin: 0; color: var(--muted); }
 .quiz-list { display: grid; gap: 10px; }
 .quiz-item { padding: 14px 16px; border-radius: 14px; background: #000; }
-.quiz-item legend { float: left; width: 100%; margin: 0 0 10px; font-weight: 500; font-size: 16px; }
+.quiz-q { margin: 0 0 10px; font-weight: 500; font-size: 16px; overflow-wrap: break-word; }
 .scale { display: flex; gap: 8px; flex-wrap: wrap; clear: both; }
 .scale label { margin: 0; cursor: pointer; }
 .scale input { position: absolute; opacity: 0; pointer-events: none; }
