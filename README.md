@@ -1,10 +1,11 @@
 # ✦ INNER CODE – Mật mã nội tâm
 
-> **Ghi chú: `innercode-giai-doan-1-v2` và Tiệm Nhỏ An Yên.**
-> Repo `minhle111509/innercode-giai-doan-1-v2` là bản sao của `minhle111509/innercode-giai-doan-1` (bản gốc giữ nguyên, không sửa), chạy tại https://minhle111509.github.io/innercode-giai-doan-1-v2/ (GitHub Pages, nhánh `main`).
-> Khác bản gốc: menu và chân trang mọi trang có liên kết sang **Tiệm Nhỏ An Yên** (https://tiem-nho-an-yen.minhle111509.workers.dev); trang Tiệm cũng có liên kết ngược về bản này (repo `minhle111509/tiem-nho-an-yen`, chân trang).
-> Đổi địa chỉ một trong hai web thì sửa liên kết ở cả hai phía.
+> **Ghi chú: `innercode-version-2` và Tiệm Nhỏ An Yên.**
+> Repo `minhle111509/innercode-version-2` (trước đây tên `innercode-giai-doan-1-v2`, đổi tên ngày 30/10/2026) chạy tại **https://innercode-version-2.pages.dev** (Cloudflare Pages, dự án `innercode-version-2`, tự cập nhật từ nhánh `main`). Không còn dùng GitHub Pages.
+> Đây là bản sao của repo `innercode-giai-doan-1` (bản giai đoạn 1); **repo gốc đó và repo `innercode-v2` đã được chủ web xóa ngày 30/10/2026**, bản dự phòng do chủ web giữ. Web bán hàng chính vẫn là repo `minhle111509/innercode` (https://innercode.pages.dev) — không sửa repo đó.
+> Đây là trang **duy nhất** liên kết qua lại với **Tiệm Nhỏ An Yên** (https://tiem-nho-an-yen.minhle111509.workers.dev): menu và chân trang mọi trang có nút sang Tiệm; chân trang Tiệm có nút "INNER CODE" trỏ về đây (repo `minhle111509/tiem-nho-an-yen`, `PARTNER_SITES` trong `src/components/Footer.tsx`). Đổi địa chỉ một trong hai web thì sửa liên kết ở cả hai phía.
 > Ô Tarot dùng ảnh lá thật của bộ Rider–Waite (tranh Pamela Colman Smith, xuất bản 1909, được xem là phạm vi công cộng): trang chủ là **X – Wheel of Fortune** (`assets/tarot-wheel-of-fortune.webp`), đầu trang `tarot.html` là **XIX – The Sun** (`assets/tarot-the-sun.webp`), lấy từ gói npm `@cometpisces/tarot-kit-images` 0.2.0. Gói này tự ghi là không bảo đảm tình trạng bản quyền của ảnh.
+> Chủ web cho phép sửa và cập nhật repo này (30/10/2026).
 
 
 Website tĩnh (HTML/CSS/JavaScript thuần, không cần build, không cần máy chủ) kết hợp **huyền học chuyên sâu** và **khám phá bản thân**. Giao diện kiểu trang sản phẩm: nền tối, tiêu đề lớn, mỗi công cụ là một "mặt đồng hồ" vẽ bằng CSS.
@@ -58,8 +59,8 @@ Yêu cầu Node.js ≥ 20, không cần cài thư viện:
 npm test
 ```
 
-## Triển khai GitHub Pages
-Repo → **Settings → Pages** → Source: *Deploy from a branch* → nhánh `main`, thư mục `/ (root)` → Save.
+## Triển khai
+Cloudflare Pages, dự án `innercode-version-2` (https://innercode-version-2.pages.dev): kết nối repo này, nhánh `main`, Framework *None*, không có build command, thư mục xuất `/`. Mỗi commit lên `main` tự triển khai. GitHub Pages đã tắt để không có hai bản web.
 
 ## Hướng phát triển (giai đoạn 2)
 Tài khoản thành viên, lưu hồ sơ, báo cáo AI và thanh toán cần thêm máy chủ (backend) để giữ khóa API và dữ liệu người dùng an toàn; không thể làm an toàn trên web tĩnh.
